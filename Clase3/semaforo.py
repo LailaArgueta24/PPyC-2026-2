@@ -30,7 +30,7 @@ def obtener_precio_stock(symbol):
         print(f"La accion {symbol} cuesta: {precio}")
 
 if __name__ == "__main__":
-    with open("Clase 3/data/lista_sp500.txt", "r") as f:
+    with open("./symbols.txt", "r") as f:
         lista_symbolos = eval(f.read())
     threads = []
     for symbol in lista_symbolos:
