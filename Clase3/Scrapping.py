@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 try:
-    with open("Clase3/wiki.html", "r", encoding="utf-8") as file:
+    with open("Clase3/data/wiki.html", "r", encoding="utf-8") as file:
         response = file.read()
     soup = BeautifulSoup(response, 'html.parser')
     table = soup.find('table', {'id': 'constituents'})
