@@ -21,7 +21,7 @@ def get_connection(user, password, host, port, database):
         )
     )
 def insert_price(symbol,price):
-    with get_connection(user, password, host, port, database).connect() as connector:
+    with get_connection(user, password, host, port, database).begin() as connector:
          connector.execute(text(f"INSERT INTO inversiones(symbol,price) VALUES ('{symbol}', {price})"))
 #        print(peticion.fetchall())
     
